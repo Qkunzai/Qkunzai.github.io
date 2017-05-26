@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Calculator2
+{
+	public static void main(String[] args){
+		int e;
+		System.out.println("请输入两个数字进行计算");
+		Scanner d=new Scanner(System.in);
+		System.out.println("请输入第一个数字");
+		int a=d.nextInt();
+		System.out.println("请输入一个运算符号");
+		String c=d.next();
+		System.out.println("请输入第二个数字");
+		int b=d.nextInt();
+		if(c.equals("+")){
+			 e=1;
+		}else if(c.equals("-")){
+			 e=2;
+		}else if(c.equals("*")){
+			 e=3;
+		}else if(c.equals("/")){
+			if(b==0){
+			 e=5;
+			}
+			 e=4;
+		}
+		if(e==1){
+			System.out.println("结果为："+(a+b));
+		}
+		if(e==2){
+			System.out.println("结果为："+(a-b));
+		}
+		if(e==3){
+			System.out.println("结果为："+(a*b));
+		}
+		if(e==4){
+			System.out.println("结果为："+(a/b));
+		}
+		if(e==5){
+			System.out.println("被除数不能为0");
+		}
+	}
+}

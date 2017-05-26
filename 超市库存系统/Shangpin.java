@@ -1,0 +1,24 @@
+public class Shangpin
+{
+	public String sname;		//商品名称
+	private double price;		//商品价格
+	public int number;		//商品数量
+	public String time;		//入库/出库时间
+	private String type;		//商品类型
+	public Shangpin(String sname,double price,int number,String time,String type){
+			this.sname=sname;
+			this.price=price;
+			this.number=number;
+			this.time=time;
+			this.type=type;
+	}
+	public void say(){
+		System.out.println("商品名称"+sname+"\t商品价格"+price+"\t商品数量"+number+"\t入库时间"+time+"\t商品类型"+type);
+	}
+	public void say1(){
+		System.out.println("商品名称"+sname+"\t商品价格"+price+"\t商品数量"+number+"\t出库时间"+time+"\t商品类型"+type);
+	}
+	public void sayType(){
+		System.out.println("类型"+type);
+	}
+}

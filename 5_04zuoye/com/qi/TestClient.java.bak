@@ -1,0 +1,33 @@
+package com.qi;
+import com.qi.OutRunnable;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class TestClient {
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		//创建一个连接客户端的Socket对象
+		Socket socket=null;
+		String aa = "";
+		PrintWriter printWriter=null;
+		try {
+			//连接到客户端
+			socket = new Socket("192.168.199.161",8888);
+			//输入自己的名字
+			//System.out.println("请输入自己的姓名");
+			//aa = sc.nextLine();
+			//将名字传输给服务器端
+			printWriter = new PrintWriter(socket.getOutputStream());
+			printWriter.write("三三\n");
+			printWriter.flush();
+			new Thread(new InRunnable(socket)).start();	//向服务器端发送消息
+			new Thread(new OutRunnable(socket)).start();	//接受服务器发来的信息
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+}
