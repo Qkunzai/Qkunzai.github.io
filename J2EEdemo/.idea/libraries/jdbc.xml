@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="jdbc">
-    <CLASSES>
-      <root url="file://D:/JAVA链接数据库驱动/com/mysql/jdbc" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
